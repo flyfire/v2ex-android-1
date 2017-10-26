@@ -1,5 +1,6 @@
 package com.czbix.v2ex.util;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -99,7 +100,7 @@ public class ViewUtils {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @SuppressLint("NewApi")
     public static Drawable getDrawable(Context context, @DrawableRes int resId) {
         if (MiscUtils.HAS_L) {
             return context.getDrawable(resId);
@@ -152,7 +153,7 @@ public class ViewUtils {
 
     @Nullable
     public static Toolbar initToolbar(AppCompatActivity activity) {
-        Toolbar toolbar = (Toolbar) activity.findViewById(R.id.toolbar);
+        Toolbar toolbar = activity.findViewById(R.id.toolbar);
         if (toolbar == null) {
             return null;
         }
