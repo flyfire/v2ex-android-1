@@ -28,10 +28,11 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.czbix.v2ex"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 26
         versionCode 96
         versionName "1.25.5"
+        multiDexEnabled true
 
         resValue 'bool', 'isDebuggable', 'false'
     }
@@ -71,7 +72,7 @@ kotlin {
 
 // Android support library version
 ext.support_version = '26.1.0'
-ext.gms_version = '15.0.0'
+ext.gms_version = '15.0.2'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
